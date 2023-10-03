@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-// const PORT = 4000
 const router = require('./api/route')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
@@ -17,8 +16,6 @@ app.get('/',(req,res)=>{
 })
 
 //DB connnection
-
-// const DB = 'mongodb+srv://fk28:farhankhan123@cluster0.fq2ibrs.mongodb.net/'
 
 mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser:true,
