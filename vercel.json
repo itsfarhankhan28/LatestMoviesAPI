@@ -7,7 +7,7 @@
         }
     ],
     "routes":[
-        { "src": "/contact/(.*)", "dest": "server.js" },
+        { "src": "/movies/(.*)", "dest": "server.js" },
         { "src": "/(.*)", "dest": "server.js" }
     ]
 }
