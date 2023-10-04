@@ -10,6 +10,6 @@ router.post('/create',upload.fields([
 
 router.get('/get',GetMovie)
 
-router.get('/:id',GetById)
+router.get('/getbyid/:id',GetById)
 
 module.exports = router
