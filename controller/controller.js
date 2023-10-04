@@ -46,7 +46,7 @@ const GetMovie = async(req,res)=>{
 const GetById = async(req,res)=>{
     try{
         const _id = req.params.id
-        const getsinglemovie = await Schema.find(_id)
+        const getsinglemovie = await Schema.findById(_id)
         console.log(getsinglemovie)
         res.json(getsinglemovie)
     }catch(err){
