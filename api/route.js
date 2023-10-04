@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {Create,GetMovie} = require('../controller/controller')
+const {Create,GetMovie,GetById} = require('../controller/controller')
 const upload = require('../middleware/multer')
 
 router.post('/create',upload.fields([
@@ -9,5 +9,7 @@ router.post('/create',upload.fields([
 ]),Create)
 
 router.get('/get',GetMovie)
+
+router.get('/:id',GetById)
 
 module.exports = router
