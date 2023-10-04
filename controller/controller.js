@@ -43,4 +43,15 @@ const GetMovie = async(req,res)=>{
     }
 }
 
-module.exports = {Create,GetMovie}
+const GetById = async(req,res)=>{
+    try{
+        const _id = req.params.id
+        const getsinglemovie = await Schema.find(_id)
+        console.log(getsinglemovie)
+        res.json(getsinglemovie)
+    }catch(err){
+        console.log(err)
+    }
+}
+
+module.exports = {Create,GetMovie,GetById}
