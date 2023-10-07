@@ -5,8 +5,14 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const { cloudinaryConfig } = require('./config/cloudinaryConfig')
 dotenv.config()
+const cors = require('cors')
 
 //middleware
+app.use(cors({
+    origin:'https://cine-base.vercel.app',
+    methods:'GET,POST,PUT,DELETE,PATCH',
+    credentials:true
+}))
 app.use(express.json())
 app.use('*',cloudinaryConfig)
 app.use('/movies',router)
